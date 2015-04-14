@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="4cdc460a-e496-4405-98a0-d346c283feea" solutionId="4cdc460a-e496-4405-98a0-d346c283feea" resetWebServer="false" sharePointProductVersion="16.0" name="ListasApi" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="647b8483-dd5a-4791-8a7d-b314d45bbaee" />
+    <featureReference itemId="a9a58d89-216b-4731-9da3-d25ee1cc532e" />
+  </features>
+</package>

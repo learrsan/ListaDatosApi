@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{4944307b-27a0-43c7-983f-b24ba2f12223}"
+       Name="Edad"
+       DisplayName="Edad"
+       Type="Number"
+       Required="TRUE"
+       Group="Custom Site Columns">
+  </Field>
+</Elements>
