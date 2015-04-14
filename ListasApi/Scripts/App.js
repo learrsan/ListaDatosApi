@@ -75,11 +75,12 @@ function cargar(id) {
 
 }
 
-function listarApi(id) {
-    var url = _spPageContextInfo.webServerRelativeUrl + "/_api/web/lists/getByTitle('ListaApi')/items";
+function CrearApi() {
+    var url = _spPageContextInfo.webServerRelativeUrl + "/_api/web/lists/getByTitle('Datos')/items";
     var digest = $("#__REQUESTDIGEST").val();
     var obj = {
-        Nombre: id,
+        Nombre: $("#txtNombre").val(),
+        Edad: $("#txtEdad").val()
         
 
     };
@@ -98,7 +99,7 @@ function listarApi(id) {
             },
             success: function () {
                 alert("Gracias por crear persona");
-                cargar(id);
+                listarRest();
 
             },
             error: function (err) {
@@ -113,15 +114,28 @@ function listarApi(id) {
 
 }
 
-function crearDatosApi(id) {
-   
+function listarRest() {
+    var votos = 0;
 
-    var url = _spPageContextInfo.webServerRelativeUrl + "/_api/web/lists/getByTitle('ListaApi')/items";
+    var url = _spPageContextInfo.webServerRelativeUrl + "/_api/web/lists/getByTitle('Datos')/items";
     $.ajax({
-        url: url + "?$filter=Nombre eq " + id,
+        url: url,
         type: "GET",
         headers: { "accept": "application/json;odata=verbose" },
-        
+        success: function (res) {
+            var html = "<ul>";
+            $.each(res.d.results, function (i, result) {
+                html += "<tr>";
+                html += "<td>" +
+                    result.Nombre + "</td>" +
+                    "<td>" +
+                    result.Edad + "</td>" +
+                    "</tr>";
+
+            });
+            html += "<tr>";
+            $("#votos").html(votos);
+        },
         error: function (err) {
             alert(JSON.stringify(err));
         }
@@ -141,9 +155,10 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
     $("#btnEnviarApiRest").click(function () {
-        crearDatosApi();
+        CrearApi();
     });
     init();
-    listarApi();
+    listadoDatos();
 
 });
+

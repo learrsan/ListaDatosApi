@@ -31,8 +31,8 @@
     <div>
         Añade los datos:<br/><br/>
         Nombre: <input type="text" id="txtNombre" /><br/><br/>
-        Edad:<input type="text" id="txtEdad"/><br/><br/>
-        <input type="button" id="btnAddDatos" value="Aceptar"/> <input type="button" id="btnEnviarApiRest" value="Enviar"/>
+        Edad: <input type="text" id="txtEdad"/><br/><br/>
+        <input type="button" id="btnAddDatos" value="Aceptar"/> <input type="button" id="btnEnviarApiRest" value="Enviar Api"/>
         
 
  </div>
